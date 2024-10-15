@@ -10,7 +10,7 @@ class Obstacle {
     //this creates the <img /> in js to append to the game screen
     this.element = document.createElement("img");
     this.element.style.position = "absolute";
-    this.element.src = "../images/redCar.png"; // './images/carImage.png'
+    this.element.src = "images/redCar.png"; // './images/carImage.png'
     this.element.style.height = `${this.height}px`;
     this.element.style.width = `${this.width}px`;
     this.element.style.top = `${this.top}px`;
