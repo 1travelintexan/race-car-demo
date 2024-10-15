@@ -10,6 +10,7 @@ class Player {
     //this creates the <img /> in js to append to the game screen
     this.element = document.createElement("img");
     this.element.style.position = "absolute";
+
     this.element.src = playerImage; // './images/carImage.png'
     this.element.style.height = `${height}px`;
     this.element.style.width = `${width}px`;
@@ -51,6 +52,10 @@ class Player {
       playerRect.top < obstacleRect.bottom &&
       playerRect.bottom > obstacleRect.top
     ) {
+      this.element.classList.add("spin");
+      setTimeout(() => {
+        this.element.classList.remove("spin");
+      }, 500);
       return true;
     } else {
       return false;

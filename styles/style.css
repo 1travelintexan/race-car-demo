@@ -68,8 +68,11 @@ body button {
 #high-scores li {
   width: 20%;
 }
+.hart {
+  height: 50px;
+}
 
-/* .spin {
+.spin {
   animation: spin 0.5s linear;
 }
 @keyframes spin {
@@ -79,4 +82,4 @@ body button {
   to {
     transform: rotate(360deg);
   }
-} */
+}

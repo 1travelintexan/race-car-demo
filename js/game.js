@@ -28,11 +28,24 @@ class Game {
     this.startScreen.style.display = "none";
     //this shows the game screen
     this.gameScreen.style.display = "block";
-
+    //this will call the generate hearts method and add them to the game screen
+    this.generateHarts();
     //this starts the loop for the game
     this.gameIntervalId = setInterval(() => {
       this.gameLoop();
     }, this.gameLoopFrequency);
+  }
+  generateHarts() {
+    for (let i = 0; i < 3; i++) {
+      const hartImg = document.createElement("img");
+      if (i < this.lives) {
+        hartImg.src = "images/lives.png";
+      } else {
+        hartImg.src = "images/heart-empty.png";
+      }
+      hartImg.classList.add("hart");
+      this.livesElement.appendChild(hartImg);
+    }
   }
   gameLoop() {
     this.update();
@@ -108,7 +121,9 @@ class Game {
         this.obstacles.splice(i, 1);
         currentObstacle.element.remove();
         this.lives--;
-        this.livesElement.innerText = this.lives;
+        this.livesElement.innerHTML = "";
+        this.generateHarts();
+        // this.livesElement.innerText = this.lives;
         //play the horn sound on collision
         // this.horn.play();
       }
