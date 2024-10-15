@@ -17,8 +17,8 @@ class Game {
     this.gameIntervalId = null;
     this.gameLoopFrequency = 1000 / 60;
     this.counter = 0;
-    this.horn = new Audio("../sounds/horn.wav");
-    this.shoot = new Audio("../sounds/shoot.wav");
+    this.horn = new Audio("sounds/horn.wav");
+    this.shoot = new Audio("sounds/shoot.wav");
   }
   start() {
     //this sets the height and width of the game screen
