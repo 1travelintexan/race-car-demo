@@ -6,7 +6,7 @@ class Game {
     this.scoreElement = document.getElementById("score");
     this.livesElement = document.getElementById("lives");
     this.highScoresElement = document.querySelector("#high-scores");
-    this.player = new Player(110, 300, 60, 120, "/images/car.png");
+    this.player = new Player(110, 300, 60, 120, "images/car.png");
     this.height = 400;
     this.width = 300;
     this.obstacles = [new Obstacle()];
